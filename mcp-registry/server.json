@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.kartic/digital-loyalty-stamp-cards",
+  "title": "Kartic - Digital Loyalty Stamp Cards For Local Businesses",
+  "description": "Digital loyalty stamp cards in Apple and Google Wallet for local businesses.",
+  "repository": {
+    "url": "https://github.com/zsevic/kartic-mcp",
+    "source": "github"
+  },
+  "version": "0.1.2",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.kartic.app/mcp"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kartic",
+  "version": "0.1.0",
+  "description": "Digital loyalty stamp cards in Google Wallet for local venues. Ask how stamp cards work, connect your Kartic account, check stats, and send Wallet reminders in chat.",
+  "author": {
+    "name": "Kartic",
+    "email": "info@kartic.app",
+    "url": "https://kartic.app"
+  },
+  "homepage": "https://kartic.app/en",
+  "keywords": ["loyalty", "stamp-card", "google-wallet", "local-business"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Kartic",
+        "shortDescription": "Wallet loyalty stamp cards",
+        "longDescription": "Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Google Wallet — no customer app to install. Discover how Wallet punch cards work, connect your Kartic merchant account, review stamp cards and stats, search customers, and send Wallet notifications from chat.",
+        "developerName": "Kartic",
+        "category": "Business & Operations",
+        "websiteURL": "https://kartic.app/en",
+        "supportURL": "https://kartic.app/en#contact",
+        "privacyPolicyURL": "https://kartic.app/en/privacy",
+        "termsOfServiceURL": "https://kartic.app/en/terms",
+        "defaultPrompt": [
+          "How do digital loyalty stamp cards work with Kartic?",
+          "Show my Kartic stamp card stats",
+          "Which industries use Kartic stamp cards?"
+        ],
+        "brandColor": "#6D4AFF",
+        "logo": "./assets/openai-icon-256.png",
+        "composerIcon": "./assets/openai-icon-256.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Explain loyalty setup",
+              "prompt": "How do digital loyalty stamp cards work with Kartic?",
+              "tools_triggered": "explain_loyalty_setup",
+              "expected_behavior": "English overview of Wallet stamp cards and setup steps; no checkout."
+            },
+            {
+              "description": "List supported venue types",
+              "prompt": "Which businesses is Kartic for?",
+              "tools_triggered": "list_supported_use_cases",
+              "expected_behavior": "List of venue types such as café, salon, bakery, gym, and similar local businesses."
+            },
+            {
+              "description": "Get started without checkout",
+              "prompt": "How do I get started with Kartic?",
+              "tools_triggered": "get_started",
+              "expected_behavior": "Informational links to kartic.app, privacy, and support; must not open Polar checkout."
+            },
+            {
+              "description": "List stamp cards when signed in",
+              "prompt": "List my stamp cards",
+              "tools_triggered": "list_card_programs",
+              "expected_behavior": "Card names and slugs for the connected demo business."
+            },
+            {
+              "description": "Show business stats when signed in",
+              "prompt": "Show my Kartic stats for the last 30 days",
+              "tools_triggered": "get_business_stats",
+              "expected_behavior": "Analytics snapshot for the connected demo business for the requested period."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Merchant tool before connect",
+              "prompt": "List my stamp cards"
+            },
+            {
+              "description": "Staff cannot search customers",
+              "prompt": "Find customer Ana"
+            },
+            {
+              "description": "Daily Wallet notification limit",
+              "prompt": "Send a Wallet notification saying Welcome back"
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Kartic does not sell products or start subscription checkout inside ChatGPT. Pricing and account setup happen on kartic.app."
+      },
+      "publication": {
+        "release_notes": "Initial Kartic ChatGPT app (v0.1.0): remote MCP with public discovery tools and OAuth-connected merchant tools for listing stamp cards, stats, customer search, and Wallet notifications."
+      }
+    }
+  }
+}

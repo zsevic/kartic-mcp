@@ -1,0 +1,13 @@
+# Build artifacts
+*.zip
+
+# MCP Registry private keys (never commit)
+mcp-registry/keys/
+*.pem
+*.hex
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
