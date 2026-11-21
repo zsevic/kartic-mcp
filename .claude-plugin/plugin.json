@@ -2,7 +2,7 @@
   "name": "kartic",
   "displayName": "Kartic",
   "version": "0.1.0",
-  "description": "Digital loyalty stamp cards in Google Wallet for local venues. Ask how stamp cards work, connect your Kartic account, check stats, and send Wallet reminders in chat.",
+  "description": "Digital loyalty stamp cards in Apple and Google Wallet for local venues. Ask how stamp cards work, connect your Kartic account, check stats, and send Wallet reminders in chat.",
   "author": {
     "name": "Kartic",
     "email": "info@kartic.app",

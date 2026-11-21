@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kartic",
   "version": "0.1.0",
-  "description": "Digital loyalty stamp cards in Google Wallet for local venues. Ask how stamp cards work, connect your Kartic account, check stats, and send Wallet reminders in chat.",
+  "description": "Digital loyalty stamp cards in Apple and Google Wallet for local venues. Ask how stamp cards work, connect your Kartic account, check stats, and send Wallet reminders in chat.",
   "author": {
     "name": "Kartic",
     "email": "info@kartic.app",
@@ -15,7 +15,7 @@
       "interface": {
         "displayName": "Kartic",
         "shortDescription": "Wallet loyalty stamp cards",
-        "longDescription": "Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Google Wallet — no customer app to install. Discover how Wallet punch cards work, connect your Kartic merchant account, review stamp cards and stats, search customers, and send Wallet notifications from chat.",
+        "longDescription": "Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Apple and Google Wallet — no customer app to install. Discover how Wallet punch cards work, connect your Kartic merchant account, review stamp cards and stats, search customers, and send Wallet notifications from chat.",
         "developerName": "Kartic",
         "category": "Business & Operations",
         "websiteURL": "https://kartic.app/en",

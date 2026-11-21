@@ -3,7 +3,7 @@ name: get-started
 description: Help a venue owner understand Kartic digital loyalty stamp cards and get started.
 ---
 
-When the user asks about loyalty cards, stamp cards, punch cards, or Google Wallet loyalty for a local business, use the Kartic MCP tools:
+When the user asks about loyalty cards, stamp cards, punch cards, or Apple / Google Wallet loyalty for a local business, use the Kartic MCP tools:
 
 1. Call `explain_loyalty_setup` for how it works.
 2. Call `list_supported_use_cases` if they ask which businesses fit.
