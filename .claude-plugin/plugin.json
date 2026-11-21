@@ -11,7 +11,7 @@
   "homepage": "https://kartic.app/en",
   "repository": "https://github.com/zsevic/kartic-mcp",
   "license": "MIT",
-  "keywords": ["loyalty", "stamp-card", "apple-wallet", "google-wallet", "local-business", "small-business"],
+  "keywords": ["loyalty", "stamp-card", "apple-wallet", "google-wallet", "local-business", "small-business", "smb"],
   "icon": "./assets/logo-256.png",
   "documentationUrl": "https://kartic.app/en",
   "supportUrl": "https://kartic.app/en#contact",

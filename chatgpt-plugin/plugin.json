@@ -9,7 +9,7 @@
     "url": "https://kartic.app"
   },
   "homepage": "https://kartic.app/en",
-  "keywords": ["loyalty", "stamp-card", "apple-wallet", "google-wallet", "local-business", "small-business"],
+  "keywords": ["loyalty", "stamp-card", "apple-wallet", "google-wallet", "local-business", "small-business", "smb"],
   "extensions": {
     "com.openai": {
       "interface": {
