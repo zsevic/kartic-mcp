@@ -9,5 +9,7 @@ mcp-registry/keys/
 # OS / editor
 .DS_Store
 Thumbs.db
+desktop.ini
+__MACOSX/
 .idea/
 .vscode/

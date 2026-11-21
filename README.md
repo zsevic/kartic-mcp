@@ -1,26 +1,31 @@
-# Kartic MCP
+# Kartic
 
-Agent Plugins package and directory listings for **Kartic** digital loyalty stamp cards.
+Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Google Wallet — no customer app to install. This repository packages the Claude plugin, ChatGPT Agent Plugins ZIP metadata, and MCP Registry listing for the remote server at `https://app.kartic.app/mcp`.
 
-The MCP server itself runs remotely at:
+## Use it
 
-`https://app.kartic.app/mcp`
+Ask how Wallet stamp cards work, which businesses fit, or how to get started. After you connect your Kartic merchant account, ask Claude to list your stamp cards, show stats, search customers, or send a Wallet reminder.
 
-This repo holds packaging and directory metadata only (Agent Plugins ZIP, MCP Registry listing).
+## Data
 
-## Package layout (Agent Plugins)
+Discovery tools return public product guidance only. Merchant tools send requests to your Kartic account on `app.kartic.app` after OAuth sign-in. The plugin stores nothing itself; account setup and billing stay on kartic.app.
+
+## Package layout
 
 | Path | Purpose |
 | --- | --- |
-| `plugin.json` | Manifest + OpenAI listing / review metadata |
-| `mcp.json` | Remote Streamable HTTP MCP |
-| `skills/` | Onboarding skill |
+| `.claude-plugin/plugin.json` | Claude directory plugin manifest |
+| `.mcp.json` | Remote HTTP MCP for Claude |
+| `skills/` | Onboarding skill (shared) |
 | `assets/` | Icons for directory listings |
+| `chatgpt-plugin/` | OpenAI Agent Plugins ZIP sources |
+| `mcp-registry/` | Official MCP Registry `server.json` |
 | `REVIEW.md` | OpenAI review checklist |
 
 ## Directories
 
-- **ChatGPT App Directory** — build the ZIP (below) and upload in the OpenAI plugins portal.
+- **Claude directory** — repo root is the plugin (`.claude-plugin/` + `.mcp.json` + `skills/`). Submit as a Plugin bundle; also submit `https://app.kartic.app/mcp` as an MCP connector.
+- **ChatGPT App Directory** — build the ZIP from `chatgpt-plugin/` (below) and upload in the OpenAI plugins portal.
 - **MCP Registry** — see [`mcp-registry/`](./mcp-registry) (`app.kartic/digital-loyalty-stamp-cards`).
 
 ## Build ChatGPT plugin ZIP
@@ -36,8 +41,8 @@ $zip = [IO.Compression.ZipFile]::Open($dest, "Create")
 function Add-Entry($name, $path) {
   [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, (Resolve-Path $path), ($name -replace '\\','/'))
 }
-Add-Entry "plugin.json" "plugin.json"
-Add-Entry "mcp.json" "mcp.json"
+Add-Entry "plugin.json" "chatgpt-plugin/plugin.json"
+Add-Entry "mcp.json" "chatgpt-plugin/mcp.json"
 Get-ChildItem assets -File | ForEach-Object { Add-Entry "assets/$($_.Name)" $_.FullName }
 Add-Entry "skills/get-started/SKILL.md" "skills/get-started/SKILL.md"
 $zip.Dispose()

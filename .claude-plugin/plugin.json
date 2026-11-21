@@ -1,0 +1,20 @@
+{
+  "name": "kartic",
+  "displayName": "Kartic",
+  "version": "0.1.0",
+  "description": "Digital loyalty stamp cards in Google Wallet for local venues. Ask how stamp cards work, connect your Kartic account, check stats, and send Wallet reminders in chat.",
+  "author": {
+    "name": "Kartic",
+    "email": "info@kartic.app",
+    "url": "https://kartic.app"
+  },
+  "homepage": "https://kartic.app/en",
+  "repository": "https://github.com/zsevic/kartic-mcp",
+  "license": "MIT",
+  "keywords": ["loyalty", "stamp-card", "google-wallet", "local-business"],
+  "icon": "./assets/logo-256.png",
+  "documentationUrl": "https://kartic.app/en",
+  "supportUrl": "https://kartic.app/en#contact",
+  "privacyPolicyUrl": "https://kartic.app/en/privacy",
+  "termsOfServiceUrl": "https://kartic.app/en/terms"
+}

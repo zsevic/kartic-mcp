@@ -105,8 +105,8 @@ $zip = [IO.Compression.ZipFile]::Open($dest, "Create")
 function Add-Entry($name, $path) {
   [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, (Resolve-Path $path), ($name -replace '\\','/'))
 }
-Add-Entry "plugin.json" "plugin.json"
-Add-Entry "mcp.json" "mcp.json"
+Add-Entry "plugin.json" "chatgpt-plugin/plugin.json"
+Add-Entry "mcp.json" "chatgpt-plugin/mcp.json"
 Get-ChildItem assets -File | ForEach-Object { Add-Entry "assets/$($_.Name)" $_.FullName }
 Add-Entry "skills/get-started/SKILL.md" "skills/get-started/SKILL.md"
 $zip.Dispose()

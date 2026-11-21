@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kartic": {
+      "type": "http",
+      "url": "https://app.kartic.app/mcp"
+    }
+  }
+}
