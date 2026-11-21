@@ -1,6 +1,6 @@
 # Kartic
 
-Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Apple and Google Wallet — no customer app to install. This repository packages the Claude plugin, Google Antigravity plugin, ChatGPT Agent Plugins ZIP metadata, and MCP Registry listing for the remote server at `https://app.kartic.app/mcp`.
+Kartic helps local businesses that rely on repeat customers run digital loyalty stamp cards in Apple and Google Wallet — no customer app to install. This repository packages the Claude plugin, Google Antigravity plugin, ChatGPT Agent Plugins ZIP metadata, and MCP Registry listing for the remote server at `https://app.kartic.app/mcp`.
 
 ## Use it
 
