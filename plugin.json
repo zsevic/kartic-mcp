@@ -28,8 +28,8 @@
           "Which industries use Kartic stamp cards?"
         ],
         "brandColor": "#6D4AFF",
-        "logo": "./assets/openai-icon-256.png",
-        "composerIcon": "./assets/openai-icon-256.png"
+        "logo": "./assets/logo-256.png",
+        "composerIcon": "./assets/logo-256.png"
       },
       "onboardingSkill": "./skills/get-started/SKILL.md",
       "review": {
