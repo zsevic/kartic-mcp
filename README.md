@@ -1,10 +1,10 @@
 # Kartic
 
-Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Apple and Google Wallet — no customer app to install. This repository packages the Claude plugin, ChatGPT Agent Plugins ZIP metadata, and MCP Registry listing for the remote server at `https://app.kartic.app/mcp`.
+Kartic helps cafés, salons, and local shops run digital loyalty stamp cards in Apple and Google Wallet — no customer app to install. This repository packages the Claude plugin, Google Antigravity plugin, ChatGPT Agent Plugins ZIP metadata, and MCP Registry listing for the remote server at `https://app.kartic.app/mcp`.
 
 ## Use it
 
-Ask how Wallet stamp cards work, which businesses fit, or how to get started. After you connect your Kartic merchant account, ask Claude to list your stamp cards, show stats, search customers, or send a Wallet reminder.
+Ask how Wallet stamp cards work, which businesses fit, or how to get started. After you connect your Kartic merchant account, ask the assistant to list your stamp cards, show stats, search customers, or send a Wallet reminder.
 
 ## Data
 
@@ -16,6 +16,8 @@ Discovery tools return public product guidance only. Merchant tools send request
 | --- | --- |
 | `.claude-plugin/plugin.json` | Claude directory plugin manifest |
 | `.mcp.json` | Remote HTTP MCP for Claude |
+| `.antigravity-plugin/plugin.json` | Google Antigravity Marketplace manifest |
+| `mcp_config.json` | Remote MCP for Antigravity |
 | `skills/` | Onboarding skill (shared) |
 | `assets/` | Icons for directory listings |
 | `chatgpt-plugin/` | OpenAI Agent Plugins ZIP sources |
@@ -25,6 +27,7 @@ Discovery tools return public product guidance only. Merchant tools send request
 ## Directories
 
 - **Claude directory** — repo root is the plugin (`.claude-plugin/` + `.mcp.json` + `skills/`). Submit as a Plugin bundle; also submit `https://app.kartic.app/mcp` as an MCP connector.
+- **Google Antigravity Marketplace** — same root with `.antigravity-plugin/` + `mcp_config.json` + `skills/`. Validate with `agy plugin validate .` then submit via the Antigravity partner intake form.
 - **ChatGPT App Directory** — build the ZIP from `chatgpt-plugin/` (below) and upload in the OpenAI plugins portal.
 - **MCP Registry** — see [`mcp-registry/`](./mcp-registry) (`app.kartic/digital-loyalty-stamp-cards`).
 
